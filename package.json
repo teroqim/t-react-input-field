@@ -1,0 +1,27 @@
+{
+  "name": "t-react-input-field",
+  "version": "0.0.1",
+  "description": "A React input field component",
+  "main": "index.jsx",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/teroqim/t-react-input-field.git"
+  },
+  "keywords": [
+    "react",
+    "input"
+  ],
+  "author": "Peter Andersson <teroqim@gmail.com> (https://github.com/teroqim)",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/teroqim/t-react-input-field/issues"
+  },
+  "homepage": "https://github.com/teroqim/t-react-input-field#readme",
+  "dependencies": {
+    "react": "^15.4.2",
+    "react-dom": "^15.4.2"
+  }
+}
