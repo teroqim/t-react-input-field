@@ -102,7 +102,7 @@ class InputField extends React.Component {
           onFocus={this.onFocus.bind(this)}
           onKeyPress={this.onKeyPress.bind(this)}
           placeholder={this.props.placeholder}
-          ref={'input'}
+          ref='input'
           type={type}
           value={this.state.value}
           />
