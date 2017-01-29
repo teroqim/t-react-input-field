@@ -1,6 +1,6 @@
 {
   "name": "t-react-input-field",
-  "version": "0.0.2",
+  "version": "0.0.3",
   "description": "A React input field component",
   "main": "dist/index.js",
   "scripts": {
