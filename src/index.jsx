@@ -102,7 +102,7 @@ class InputField extends React.Component {
           onFocus={this.onFocus.bind(this)}
           onKeyPress={this.onKeyPress.bind(this)}
           placeholder={this.props.placeholder}
-          ref='input'
+          ref={input => this.input = input}
           type={type}
           value={this.state.value}
           />
@@ -113,7 +113,7 @@ class InputField extends React.Component {
   }
 
   setFocus(){
-    this.refs.input.focus()
+    this.input.focus()
   }
 }
 
