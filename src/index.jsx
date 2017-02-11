@@ -61,7 +61,7 @@ class InputField extends React.Component {
       type = 'password'
     }
 
-    var inputClassName = this.props.inputClassName
+    var inputClassName = this.props.inputClassName || ''
     if (this.props.showError) {
       inputClassName += ' err'
     }
@@ -83,7 +83,7 @@ class InputField extends React.Component {
     }
 
     var errorBubble = null
-    if (this.props.errorBubbleText && this.state.showErrorBubble) {
+    if (this.props.errorBubbleText && this.props.showError) {
       errorBubble = (
         <div>
           <div className='error-bubble'
