@@ -55,6 +55,14 @@ class InputField extends React.Component {
     this.setState({showInfoBox: false})
   }
 
+  onMouseOverErrorBubble(){
+    this.setState({showErrorBox: true})
+  }
+
+  onMouseOutErrorBubble(){
+    this.setState({showErrorBox: false})
+  }
+
   render(){
     var type = 'text'
     if (this.props.password) {
