@@ -82,6 +82,22 @@ class InputField extends React.Component {
       )
     }
 
+    var errorBubble = null
+    if (this.props.errorBubbleText && this.state.showErrorBubble) {
+      errorBubble = (
+        <div>
+          <div className='error-bubble'
+            onMouseOver={this.onMouseOverErrorBubble.bind(this)}
+            onMouseOut={this.onMouseOutErrorBubble.bind(this)}></div>
+          {
+            this.state.showErrorBox ?
+              <div className='error-box'>{this.props.errorBubbleText}</div>
+              : null
+          }
+        </div>
+      )
+    }
+
     var wrapperClass = 'input-field-wrapper'
     if (this.props.wrapperClass) {
       wrapperClass += ' ' + this.props.wrapperClass
@@ -107,6 +123,7 @@ class InputField extends React.Component {
           value={this.state.value}
           />
         {info}
+        {errorBubble}
         {preText}
       </div>
     )

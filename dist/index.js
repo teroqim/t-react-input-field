@@ -177,6 +177,22 @@ return /******/ (function(modules) { // webpackBootstrap
 	        );
 	      }
 
+	      var errorBubble = null;
+	      if (this.props.errorBubbleText && this.state.showErrorBubble) {
+	        errorBubble = _react2.default.createElement(
+	          'div',
+	          null,
+	          _react2.default.createElement('div', { className: 'error-bubble',
+	            onMouseOver: this.onMouseOverErrorBubble.bind(this),
+	            onMouseOut: this.onMouseOutErrorBubble.bind(this) }),
+	          this.state.showErrorBox ? _react2.default.createElement(
+	            'div',
+	            { className: 'error-box' },
+	            this.props.errorBubbleText
+	          ) : null
+	        );
+	      }
+
 	      var wrapperClass = 'input-field-wrapper';
 	      if (this.props.wrapperClass) {
 	        wrapperClass += ' ' + this.props.wrapperClass;
@@ -209,6 +225,7 @@ return /******/ (function(modules) { // webpackBootstrap
 	          value: this.state.value
 	        }),
 	        info,
+	        errorBubble,
 	        preText
 	      );
 	    }
